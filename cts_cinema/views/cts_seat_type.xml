@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="cts_seat_type_view_tree" model="ir.ui.view">
+        <field name="name">cts_seat_type_view_tree</field>
+        <field name="model">cts.seat.type</field>
+        <field name="arch" type="xml">
+            <tree string="cts_seat_type_tree">
+                <field name="name"/>
+                <field name="amount"/>
+                <field name="currency_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+    <record id="cts_seat_type_action" model="ir.actions.act_window">
+        <field name="name">Seat Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cts.seat.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

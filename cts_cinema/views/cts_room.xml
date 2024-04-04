@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="cts_room_action" model="ir.actions.act_window">
+        <field name="name">Rooms</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cts.room</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="cts_room_view_tree" model="ir.ui.view">
+        <field name="name">cts_room_view_tree</field>
+        <field name="model">cts.room</field>
+        <field name="arch" type="xml">
+            <tree string="cts_room_tree">
+                <field name="name"/>
+                <field name="line_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="cts_room_view_form" model="ir.ui.view">
+        <field name="name">cts_room_view_form</field>
+        <field name="model">cts.room</field>
+        <field name="arch" type="xml">
+            <form string="cts_room_form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="line_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="type" optional="show"/>
+<!--                                <field name="amount"/>-->
+                                <field name="amount" sum="Total Amount" optional="show"/>
+                                <field name="currency_id" readonly="1" optional="hide"/>
+                            </tree>
+                        </field>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

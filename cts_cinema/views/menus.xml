@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+    <menuitem id="cts_cinema_root" name="Cinema">
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="conf_categ" name="Configuration">
+            <!-- This Menu Item must have a parent and an action -->
+            <menuitem id="cts_room_categ" name="Rooms" action="cts_cinema.cts_room_action" sequence="0"/>
+            <menuitem id="cts_seat_type_categ" name="Seat Type" action="cts_cinema.cts_seat_type_action" sequence="1"/>
+        </menuitem>
+    </menuitem>
+</odoo>
